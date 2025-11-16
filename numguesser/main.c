@@ -12,11 +12,10 @@ int main(void){
 
     int guess;
     int tries = 0;
-    printf("The number is: %d\n", num);
     
     do
     {
-        printf("Guess the number: ");
+        printf("Guess a number between 1 and 100: ");
         scanf("%d", &guess);
         if (guess > num){
             printf("Too HIGH!\n");
@@ -32,10 +31,10 @@ int main(void){
     } while (guess != num);
     
     if (tries == 1){
-        printf("You found it! The number was %d in %d try!\n", num, tries);
+        printf("You found it in %d try! The number was %d!\n", tries, num);
     }
     else{
-        printf("You found it! The number was %d in %d tries!\n", num, tries);
+        printf("You found it in %d tries! The number was %d!\n", tries, num);
     }
     
     return 0;
